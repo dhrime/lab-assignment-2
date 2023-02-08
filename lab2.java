@@ -112,14 +112,26 @@ public class lab2 {
     // TODO
     // method to find max value of array
     public static int arrayMax(int[] array) {
-
+        int max = Integer.MIN_VALUE;
+        for (int i = 0; i < array.length; i++){
+            if (array[i] > max){
+                max = array[i];
+            }
+        }
+        return max;
 
     }
 
     // TODO
     // method to find min value of array
     public static int arrayMin(int[] array) {
-
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < array.length; i++){
+            if (array[i] < min){
+                min = array[i];
+            }
+        }
+        return min;
         
     }
 
