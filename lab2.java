@@ -1,6 +1,5 @@
 import java.util.Random;
 import java.util.Scanner;
-import java.util.random.*;
 
 public class lab2 {
 
@@ -45,13 +44,15 @@ public class lab2 {
 
         while(programActive)
         {
-            System.out.println("Please choose an action:\n" +
+            System.out.println("List of Available Commands\n" +
+                            "____________________________________\n" +
                             "1) Find the maximum of the array\n" +
                             "2) Find the minimum of the array\n" +
                             "3) Find the average of the array and display how each element differs from the average\n" +
                             "4) Find the sum of the elements with an odd index\n" +
                             "5) Find the sum of the elements with an even index\n" +
-                            " Press \"q\" to quit the program. ");
+                            " Press \"q\" to quit the program.\n " +
+                            "Please choose your action: ");
             
             char userChoice = input.next().charAt(0);
 
@@ -98,12 +99,9 @@ public class lab2 {
 
         }
 
-        
-
     }
 
 
-    // TODO
     // method to create an array of random integers [0, 100] with given the size
     public static int[] createArray(int arraySize) {
         Random random = new Random();
@@ -115,10 +113,9 @@ public class lab2 {
         return arr;
     }
 
-    // TODO
     // method to find max value of array
     public static int arrayMax(int[] array) {
-        int max = Integer.MIN_VALUE;
+        int max = 0;
         for (int i = 0; i < array.length; i++){
             if (array[i] > max){
                 max = array[i];
@@ -128,10 +125,9 @@ public class lab2 {
 
     }
 
-    // TODO
     // method to find min value of array
     public static int arrayMin(int[] array) {
-        int min = Integer.MAX_VALUE;
+        int min = 100;
         for (int i = 0; i < array.length; i++){
             if (array[i] < min){
                 min = array[i];
@@ -141,7 +137,7 @@ public class lab2 {
         
     }
 
-    // TODO
+    
     // method to find the average of array and display the differences from the average
     public static void arrayAverage(int[] array) {
         int sum = 0;
@@ -149,31 +145,30 @@ public class lab2 {
             sum += array[i]; 
         }
         double average = (double) sum / array.length;
+        System.out.println("The average of the array is: " + average);
         for(int i = 0; i < array.length; i++){
             System.out.println("The difference between the average and "+i+". index is: " + ( average - array[i] ));
         }
 
     }
 
-    // TODO
+    
     // method to find sum of odd indexes
     public static int arrayOddIndexSum(int[] array) {
-       int oddSum = 0;
+        int oddSum = 0;
         for (int i = 1; i<array.length; i=i+2) {
         oddSum = oddSum + array[i];
-    }
+        }
         return oddSum;
     }
 
-    // TODO
+    
     // method to find sum of even indexes
     public static int arrayEvenIndexSum(int[] array) {
         int evenSum = 0;
         for (int i = 0; i<array.length;i=i+2) {
         evenSum = evenSum + array[i];
-    }
+        }
         return evenSum;
     }
-
-
 }
