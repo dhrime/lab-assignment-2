@@ -158,15 +158,21 @@ public class lab2 {
     // TODO
     // method to find sum of odd indexes
     public static int arrayOddIndexSum(int[] array) {
-
-
+       int oddSum = 0;
+        for (int i = 1; i<array.length; i=i+2) {
+        oddSum = oddSum + array[i];
+    }
+        return oddSum;
     }
 
     // TODO
     // method to find sum of even indexes
     public static int arrayEvenIndexSum(int[] array) {
-
-
+        int evenSum = 0;
+        for (int i = 0; i<array.length;i=i+2) {
+        evenSum = evenSum + array[i];
+    }
+        return evenSum;
     }
 
 
