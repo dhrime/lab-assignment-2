@@ -138,7 +138,14 @@ public class lab2 {
     // TODO
     // method to find the average of array and display the differences from the average
     public static void arrayAverage(int[] array) {
-
+        int sum = 0;
+        for(int i = 0; i < array.length; i++){
+            sum += array[i]; 
+        }
+        double average = (double) sum / array.length;
+        for(int i = 0; i < array.length; i++){
+            System.out.println("The difference between the average and "+i+". index is: " + ( average - array[i] ));
+        }
 
     }
 
