@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 import java.util.random.*;
 
@@ -105,8 +106,13 @@ public class lab2 {
     // TODO
     // method to create an array of random integers [0, 100] with given the size
     public static int[] createArray(int arraySize) {
-
-
+        Random random = new Random();
+        int [] arr = new int[arraySize];
+        for(int i = 0; i < arraySize; i++)
+        {
+            arr[i] = random.nextInt(101); // generates a number between 0 and 100 (inclusive)
+        }
+        return arr;
     }
 
     // TODO
